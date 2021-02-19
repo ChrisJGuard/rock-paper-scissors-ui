@@ -95,6 +95,16 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+// Event listeners for gaming purposes!
+
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", () => playRound("rock", computerPlay()));
+paper.addEventListener("click", () => playRound("paper", computerPlay()));
+scissors.addEventListener("click", () => playRound("scissors", computerPlay()));
+
 // Function to play given number of rounds with score tracking
 
 // function playGame(rounds) {
