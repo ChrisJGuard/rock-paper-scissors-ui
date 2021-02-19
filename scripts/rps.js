@@ -1,13 +1,11 @@
 // Rock, Paper, Scissors (v2 - interacts with HTML!)
 
 // Create and initialise player score, computer score, and count variables
-
 let playerScore = 0;
 let computerScore = 0;
 let roundCount = 0;
 
 // Function to produce computer move
-
 function computerPlay() {
   // Set computer bias levels (equal chance by default)
   const lowerBiasLevel = 1 / 3;
@@ -31,7 +29,6 @@ function computerPlay() {
 }
 
 // Function to update commentary with the winner
-
 function checkWinner() {
   if (playerScore > computerScore)
     updateCommentary("That's it! You win the match!");
@@ -41,7 +38,6 @@ function checkWinner() {
 }
 
 // Function to reset the game
-
 function gameReset() {
   playerScore = 0;
   computerScore = 0;
@@ -49,7 +45,6 @@ function gameReset() {
 }
 
 // Function to play a single round against the computer
-
 function playRound(playerSelection, computerSelection) {
   // Add to the round count
   roundCount += 1;
