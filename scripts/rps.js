@@ -33,8 +33,8 @@ function checkWinner() {
   if (playerScore > computerScore)
     updateCommentary("That's it! You win the match!");
   else if (playerScore < computerScore)
-    updateCommentary("That's it! After five rounds, I'm afraid you lose.");
-  else updateCommentary("Ooooh, it's a tie! Try again?");
+    updateCommentary("That's it! I'm afraid you lose the match.");
+  else updateCommentary("Ooooh, it's a tie! Fancy another match?");
 }
 
 // Function to reset the game
