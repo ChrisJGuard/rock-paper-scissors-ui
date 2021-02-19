@@ -1,9 +1,10 @@
 // Rock, Paper, Scissors (v2 - interacts with HTML!)
 
-// Create and initialise player and computer score variables
+// Create and initialise player score, computer score, and count variables
 
 let playerScore = 0;
 let computerScore = 0;
+let roundCount = 0;
 
 // Function to produce computer move
 
@@ -40,6 +41,10 @@ function computerPlay() {
 // Function to play a single round against the computer
 
 function playRound(playerSelection, computerSelection) {
+  // Add to the round count
+
+  roundCount += 1;
+
   // Check each individual case to see who wins!
 
   switch (true) {
@@ -93,6 +98,29 @@ function playRound(playerSelection, computerSelection) {
       updateScore(playerScore, computerScore);
       updateCommentary(`It's a tie! You both chose ${playerSelection}.`);
   }
+
+  if (roundCount === 5) {
+    checkWinner();
+    gameReset();
+  }
+}
+
+// Function to update commentary with the winner
+
+function checkWinner() {
+  if (playerScore > computerScore)
+    updateCommentary("That's it! You win the match!");
+  else if (playerScore < computerScore)
+    updateCommentary("That's it! After five rounds, I'm afraid you lose.");
+  else updateCommentary("Ooooh, it's a tie! Try again?");
+}
+
+// Function to reset the game
+
+function gameReset() {
+  playerScore = 0;
+  computerScore = 0;
+  roundCount = 0;
 }
 
 // Event listeners for gaming purposes!
@@ -104,47 +132,3 @@ const scissors = document.querySelector("#scissors");
 rock.addEventListener("click", () => playRound("rock", computerPlay()));
 paper.addEventListener("click", () => playRound("paper", computerPlay()));
 scissors.addEventListener("click", () => playRound("scissors", computerPlay()));
-
-// Function to play given number of rounds with score tracking
-
-// function playGame(rounds) {
-//   // Create player input variable
-
-//   let playerInput;
-
-//   // Reset scores to zero
-
-//   playerScore = 0;
-//   computerScore = 0;
-
-//   // Create loop based on requested number of rounds
-
-//   for (let i = 0; i < rounds; i++) {
-//     // Get choice from player
-
-//     playerInput = prompt(
-//       "Please enter your move:",
-//       "e.g. rock, paper, or scissors"
-//     );
-
-//     // Play round and log result to the console
-
-//     console.log(playRound(playerInput, computerPlay()));
-
-//     // Log current or final score to the console
-
-//     if (i + 1 < rounds) {
-//       console.log(
-//         `The current score is: Player ${playerScore} - Computer ${computerScore}.`
-//       );
-//     } else {
-//       console.log(
-//         `That's it! The final score is: Player ${playerScore} - Computer ${computerScore}.`
-//       );
-//     }
-//   }
-
-//   // Alert the player that the game is over
-
-//   return "The game is over - thanks for playing!";
-// }
