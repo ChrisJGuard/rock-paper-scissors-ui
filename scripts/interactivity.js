@@ -25,3 +25,9 @@ function updateScore(player, computer) {
   const div = document.querySelector(".scoreboard");
   div.textContent = player + " - " + computer;
 }
+
+// Updates round counter
+function updateRounds(round) {
+  const div = document.querySelector(".rounds");
+  div.textContent = "Round: " + round;
+}

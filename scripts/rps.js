@@ -48,6 +48,7 @@ function gameReset() {
 function playRound(playerSelection, computerSelection) {
   // Add to the round count
   roundCount += 1;
+  updateRounds(roundCount);
 
   // Check each individual case to see who wins!
   switch (true) {
