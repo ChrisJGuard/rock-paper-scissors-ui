@@ -7,8 +7,10 @@
 .buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: rgb(230, 230, 230);
   border-bottom: 5px solid black;
+  height: 7em;
 }
 
 .user-button {
@@ -19,7 +21,8 @@
   padding: 0.5em;
   border-radius: 5px;
   background: skyblue;
-  width: 5em;
+  width: 6em;
+  transition: all 0.2s;
 }
 
 .user-button:hover,
