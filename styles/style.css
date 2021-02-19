@@ -33,3 +33,11 @@
 .user-button.selected {
   border: 1px solid grey;
 }
+
+.scoreboard {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  border-bottom: 5px solid black;
+  background: skyblue;
+}
