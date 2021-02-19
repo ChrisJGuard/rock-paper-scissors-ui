@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  background: rgb(230, 230, 230);
+  border-bottom: 5px solid black;
+}
+
+.user-button {
+  font-family: Impact, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5em;
+  padding: 0.5em;
+  background: skyblue;
+  width: 5em;
+}
