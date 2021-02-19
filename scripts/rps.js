@@ -109,7 +109,7 @@ function playGame(rounds) {
 
   // Create loop based on requested number of rounds
 
-  for (i = 0; i < rounds; i++) {
+  for (let i = 0; i < rounds; i++) {
     // Get choice from player
 
     playerInput = prompt(
@@ -123,7 +123,7 @@ function playGame(rounds) {
 
     // Log current or final score to the console
 
-    if (i + 1 < rounds) {
+    if (let i + 1 < rounds) {
       console.log(
         `The current score is: Player ${playerScore} - Computer ${computerScore}.`
       );
