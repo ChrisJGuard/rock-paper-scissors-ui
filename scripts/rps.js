@@ -1,4 +1,4 @@
-// Rock, Paper, Scissors (v1)
+// Rock, Paper, Scissors (v2 - interacts with HTML!)
 
 // Create player and computer score variables
 

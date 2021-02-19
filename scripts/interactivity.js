@@ -13,3 +13,9 @@ function toggleSelected(button) {
     button.classList.toggle("selected");
   });
 }
+
+// Updates commentary div with given text
+function updateCommentary(text) {
+  const div = document.querySelector(".commentary");
+  div.textContent = text;
+}
