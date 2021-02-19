@@ -1,9 +1,9 @@
 // Rock, Paper, Scissors (v2 - interacts with HTML!)
 
-// Create player and computer score variables
+// Create and initialise player and computer score variables
 
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
 
 // Function to produce computer move
 
@@ -40,11 +40,6 @@ function computerPlay() {
 // Function to play a single round against the computer
 
 function playRound(playerSelection, computerSelection) {
-  // Convert both player and computer selections to lower case
-
-  playerSelection = playerSelection.toLowerCase();
-  computerSelection = computerSelection.toLowerCase();
-
   // Check each individual case to see who wins!
 
   switch (true) {
@@ -52,36 +47,42 @@ function playRound(playerSelection, computerSelection) {
 
     case playerSelection === "rock" && computerSelection === "scissors":
       playerScore += 1;
+      updateScore(playerScore, computerScore);
       return "You win! Rock beats scissors!";
 
     // Player chooses rock, computer chooses paper (player loses)
 
     case playerSelection === "rock" && computerSelection === "paper":
       computerScore += 1;
+      updateScore(playerScore, computerScore);
       return "You lose! Paper beats rock...";
 
     // Player chooses paper, computer chooses rock (player wins)
 
     case playerSelection === "paper" && computerSelection === "rock":
       playerScore += 1;
+      updateScore(playerScore, computerScore);
       return "You win! Paper beats rock!";
 
     // Player chooses paper, computer chooses scissors (player loses)
 
     case playerSelection === "paper" && computerSelection === "scissors":
       computerScore += 1;
+      updateScore(playerScore, computerScore);
       return "You lose! Scissors beats paper...";
 
     // Player chooses scissors, computer chooses rock (player loses)
 
     case playerSelection === "scissors" && computerSelection === "rock":
       computerScore += 1;
+      updateScore(playerScore, computerScore);
       return "You lose! Rock beats scissors...";
 
     // Player chooses scissors, computer chooses paper (player wins)
 
     case playerSelection === "scissors" && computerSelection === "paper":
       playerScore += 1;
+      updateScore(playerScore, computerScore);
       return "You win! Scissors beats paper!";
 
     // Both players choose the same (tie result)
@@ -89,6 +90,7 @@ function playRound(playerSelection, computerSelection) {
     default:
       playerScore += 1;
       computerScore += 1;
+      updateScore(playerScore, computerScore);
       return `It's a tie! You both chose ${playerSelection}.`;
   }
 }
