@@ -97,44 +97,44 @@ function playRound(playerSelection, computerSelection) {
 
 // Function to play given number of rounds with score tracking
 
-function playGame(rounds) {
-  // Create player input variable
+// function playGame(rounds) {
+//   // Create player input variable
 
-  let playerInput;
+//   let playerInput;
 
-  // Reset scores to zero
+//   // Reset scores to zero
 
-  playerScore = 0;
-  computerScore = 0;
+//   playerScore = 0;
+//   computerScore = 0;
 
-  // Create loop based on requested number of rounds
+//   // Create loop based on requested number of rounds
 
-  for (let i = 0; i < rounds; i++) {
-    // Get choice from player
+//   for (let i = 0; i < rounds; i++) {
+//     // Get choice from player
 
-    playerInput = prompt(
-      "Please enter your move:",
-      "e.g. rock, paper, or scissors"
-    );
+//     playerInput = prompt(
+//       "Please enter your move:",
+//       "e.g. rock, paper, or scissors"
+//     );
 
-    // Play round and log result to the console
+//     // Play round and log result to the console
 
-    console.log(playRound(playerInput, computerPlay()));
+//     console.log(playRound(playerInput, computerPlay()));
 
-    // Log current or final score to the console
+//     // Log current or final score to the console
 
-    if (i + 1 < rounds) {
-      console.log(
-        `The current score is: Player ${playerScore} - Computer ${computerScore}.`
-      );
-    } else {
-      console.log(
-        `That's it! The final score is: Player ${playerScore} - Computer ${computerScore}.`
-      );
-    }
-  }
+//     if (i + 1 < rounds) {
+//       console.log(
+//         `The current score is: Player ${playerScore} - Computer ${computerScore}.`
+//       );
+//     } else {
+//       console.log(
+//         `That's it! The final score is: Player ${playerScore} - Computer ${computerScore}.`
+//       );
+//     }
+//   }
 
-  // Alert the player that the game is over
+//   // Alert the player that the game is over
 
-  return "The game is over - thanks for playing!";
-}
+//   return "The game is over - thanks for playing!";
+// }
