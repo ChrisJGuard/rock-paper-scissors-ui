@@ -13,5 +13,16 @@
       <div class="user-button">Paper</div>
       <div class="user-button">Scissors</div>
     </div>
+    <script>
+      const userBtn = document.querySelectorAll(".user-button");
+      userBtn.forEach((button) => {
+        button.addEventListener("mousedown", () => {
+          button.classList.toggle("selected");
+        });
+        button.addEventListener("mouseup", () => {
+          button.classList.toggle("selected");
+        });
+      });
+    </script>
   </body>
 </html>
