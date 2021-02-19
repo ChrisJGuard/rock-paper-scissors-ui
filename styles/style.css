@@ -41,3 +41,12 @@
   border-bottom: 5px solid black;
   background: skyblue;
 }
+
+.commentary {
+  font-family: Impact, sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  background: rgb(230, 230, 230);
+  border-bottom: 5px solid black;
+  padding: 0.25em 0;
+}
