@@ -123,7 +123,7 @@ function playGame(rounds) {
 
     // Log current or final score to the console
 
-    if (let i + 1 < rounds) {
+    if (i + 1 < rounds) {
       console.log(
         `The current score is: Player ${playerScore} - Computer ${computerScore}.`
       );
