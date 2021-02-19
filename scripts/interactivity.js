@@ -19,3 +19,9 @@ function updateCommentary(text) {
   const div = document.querySelector(".commentary");
   div.textContent = text;
 }
+
+// Updates scoreboard with given scores
+function updateScore(player, computer) {
+  const div = document.querySelector(".scoreboard");
+  div.textContent = player + " - " + computer;
+}
