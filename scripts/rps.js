@@ -48,50 +48,50 @@ function playRound(playerSelection, computerSelection) {
     case playerSelection === "rock" && computerSelection === "scissors":
       playerScore += 1;
       updateScore(playerScore, computerScore);
-      return "You win! Rock beats scissors!";
-
+      updateCommentary("You win! Rock beats scissors!");
+      break;
     // Player chooses rock, computer chooses paper (player loses)
 
     case playerSelection === "rock" && computerSelection === "paper":
       computerScore += 1;
       updateScore(playerScore, computerScore);
-      return "You lose! Paper beats rock...";
-
+      updateCommentary("You lose! Paper beats rock...");
+      break;
     // Player chooses paper, computer chooses rock (player wins)
 
     case playerSelection === "paper" && computerSelection === "rock":
       playerScore += 1;
       updateScore(playerScore, computerScore);
-      return "You win! Paper beats rock!";
-
+      updateCommentary("You win! Paper beats rock!");
+      break;
     // Player chooses paper, computer chooses scissors (player loses)
 
     case playerSelection === "paper" && computerSelection === "scissors":
       computerScore += 1;
       updateScore(playerScore, computerScore);
-      return "You lose! Scissors beats paper...";
-
+      updateCommentary("You lose! Scissors beats paper...");
+      break;
     // Player chooses scissors, computer chooses rock (player loses)
 
     case playerSelection === "scissors" && computerSelection === "rock":
       computerScore += 1;
       updateScore(playerScore, computerScore);
-      return "You lose! Rock beats scissors...";
-
+      updateCommentary("You lose! Rock beats scissors...");
+      break;
     // Player chooses scissors, computer chooses paper (player wins)
 
     case playerSelection === "scissors" && computerSelection === "paper":
       playerScore += 1;
       updateScore(playerScore, computerScore);
-      return "You win! Scissors beats paper!";
-
+      updateCommentary("You win! Scissors beats paper!");
+      break;
     // Both players choose the same (tie result)
 
     default:
       playerScore += 1;
       computerScore += 1;
       updateScore(playerScore, computerScore);
-      return `It's a tie! You both chose ${playerSelection}.`;
+      updateCommentary(`It's a tie! You both chose ${playerSelection}.`);
   }
 }
 
