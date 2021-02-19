@@ -31,10 +31,10 @@ function computerPlay() {
 // Function to update commentary with the winner
 function checkWinner() {
   if (playerScore > computerScore)
-    updateCommentary("That's it! You win the match!");
+    updateCommentary("That's it! You win the match! Go again?");
   else if (playerScore < computerScore)
-    updateCommentary("That's it! I'm afraid you lose the match.");
-  else updateCommentary("Ooooh, it's a tie! Fancy another match?");
+    updateCommentary("That's it! I'm afraid you lose the match. Go again?");
+  else updateCommentary("That's it! It's a draw! Fancy another match?");
 }
 
 // Function to reset the game
