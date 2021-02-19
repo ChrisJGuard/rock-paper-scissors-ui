@@ -18,6 +18,13 @@ body {
   height: 7em;
 }
 
+@media screen and (max-width: 670px) {
+  .buttons {
+    flex-direction: column;
+    height: 20em;
+  }
+}
+
 .user-button {
   font-family: Impact, sans-serif;
   font-size: 2rem;
